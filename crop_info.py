@@ -1,0 +1,53 @@
+"""General, non-precise crop notes. Typical measured values are computed from the dataset in the app."""
+
+CROP_INFO = {
+    "rice": ("Staple cereal grown in flooded or well-watered fields.",
+             "Warm, humid climate with plenty of water.", "Major food crop for much of the world, especially Asia."),
+    "maize": ("Cereal grown for grain, fodder and industrial use.",
+              "Warm season crop; needs fertile, well-drained soil.", "Also called corn; widely used as food and feed."),
+    "chickpea": ("Pulse (legume) grown for protein-rich seeds.",
+                 "Cool, relatively dry growing season; well-drained soil.", "Legumes can improve soil nitrogen."),
+    "kidneybeans": ("Legume grown for edible dried beans.",
+                    "Moderate temperatures; well-drained soil.", "Common in many cuisines; sensitive to waterlogging."),
+    "pigeonpeas": ("Hardy legume grown for dried peas.",
+                   "Tolerates warm, drier conditions.", "Important pulse in tropical and subtropical regions."),
+    "mothbeans": ("Drought-tolerant legume.",
+                  "Hot, dry climates and light soils.", "Often grown in arid regions."),
+    "mungbean": ("Small-seeded legume with a short growing cycle.",
+                 "Warm climate; avoids waterlogged soil.", "Used whole, split or as sprouts."),
+    "blackgram": ("Pulse grown for protein-rich seeds.",
+                  "Warm, humid conditions.", "Widely used in South Asian dishes."),
+    "lentil": ("Cool-season legume grown for seeds.",
+               "Cooler weather and moderate moisture.", "One of the oldest cultivated crops."),
+    "pomegranate": ("Fruit-bearing shrub or small tree.",
+                    "Warm, dry summers; tolerates some dryness.", "Perennial; fruit is eaten fresh or juiced."),
+    "banana": ("Tropical perennial fruit crop.",
+               "Warm, humid climate with regular water.", "Needs fertile soil and good potassium supply."),
+    "mango": ("Tropical evergreen fruit tree.",
+              "Warm climate with a drier period before flowering.", "Perennial tree crop; takes years to bear fully."),
+    "grapes": ("Fruit-bearing vine grown for fresh fruit, raisins and wine.",
+               "Warm, relatively dry growing season.", "Usually trained on supports and pruned yearly."),
+    "watermelon": ("Trailing vine grown for large juicy fruit.",
+                   "Warm weather and well-drained, sandy-type soils.", "Needs a long warm season."),
+    "muskmelon": ("Trailing vine grown for sweet melons.",
+                  "Warm, sunny weather; well-drained soil.", "Sensitive to cold and excess moisture."),
+    "apple": ("Temperate deciduous fruit tree.",
+              "Needs a cool winter period and moderate summers.", "Grown mainly in cooler, hilly regions."),
+    "orange": ("Evergreen citrus fruit tree.",
+               "Subtropical to tropical climate, frost-free.", "Needs regular watering and nutrition."),
+    "papaya": ("Fast-growing tropical fruit plant.",
+               "Warm climate; dislikes waterlogging.", "Fruits within the first year or two."),
+    "coconut": ("Tropical palm grown for nuts, oil and fibre.",
+                "Warm, humid coastal-type climate.", "Perennial palm with many uses."),
+    "cotton": ("Fibre crop grown for textile production.",
+               "Long warm season with sunshine.", "Major cash crop; also yields cottonseed oil."),
+    "jute": ("Fibre crop used for sacks and ropes.",
+             "Warm, humid climate with plenty of water.", "Natural, biodegradable fibre."),
+    "coffee": ("Perennial shrub grown for coffee beans.",
+               "Tropical highland-type climate with regular moisture.", "Often grown under shade."),
+}
+
+
+def lookup(label: str):
+    key = str(label).lower().replace(" ", "").replace("_", "")
+    return CROP_INFO.get(key)
